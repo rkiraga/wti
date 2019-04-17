@@ -45,25 +45,31 @@ public class Test {
         //        storeAccessToken(twitter.verifyCredentials().getId() , accessToken);
 
 
-        //Twitter twitter = TwitterFactory.getSingleton();
-        List<Status> statuses = twitter.getHomeTimeline();
-        System.out.println("Showing home timeline.");
-        for (Status status : statuses) {
-            System.out.println(status.getUser().getName() + ":" +
-                    status.getText());
-        }
-        System.out.println( twitter.getUserTimeline("AndrzejDuda") );
-        System.out.println("===============\n\n");
-        //System.out.println( twitter.tweets().getRetweets(new Long("896523232098078720")) );
-
-//        System.out.println(twitter.tweets().);
-        System.out.println("===============\n\n");
-        System.out.println("===============\n\n");
-        System.out.println( twitter.getAccountSettings().getScreenName() );
+//        //Twitter twitter = TwitterFactory.getSingleton();
+//        List<Status> statuses = twitter.getHomeTimeline();
+//        System.out.println("Showing home timeline.");
+//        for (Status status : statuses) {
+//            System.out.println(status.getUser().getName() + ":" +
+//                    status.getText());
+//        }
+//        System.out.println( twitter.getUserTimeline("AndrzejDuda") );
+//        System.out.println("===============\n\n");
+//        //System.out.println( twitter.tweets().getRetweets(new Long("896523232098078720")) );
+//
+////        System.out.println(twitter.tweets().);
+//        System.out.println("===============\n\n");
+//        System.out.println("===============\n\n");
+//        System.out.println( twitter.getAccountSettings().getScreenName() );
 
         //Status status = twitter.updateStatus(args[0]);
         //System.out.println("Successfully updated the status to [" + status.getText() + "].");
-        System.exit(0);
+//        System.exit(0);
+
+        //Reports reports = new Reports(twitter, "AndrzejDuda");
+        Reports reports = new Reports(twitter, "betelgeuse_3");
+
+        reports.makeReport();
+
     }
 
 }
