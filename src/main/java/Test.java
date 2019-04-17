@@ -50,11 +50,14 @@ public class Test {
         System.out.println("DUDA FOLLOWUJE:  " + twitter.showUser("AndrzejDuda").getFriendsCount());
         System.out.println("DUDE FOLLOWUJE :  " + twitter.showUser("AndrzejDuda").getFollowersCount());
         System.out.println("DATA :  " + twitter.showUser("AndrzejDuda").getCreatedAt());
-        System.out.println("DATA :  " + twitter.showUser("AndrzejDuda"));
+        System.out.println("LICZBA TWEETÓW? :  " + twitter.showUser("AndrzejDuda").getStatusesCount());
+        System.out.println("? Radke :  " + twitter.showUser("Radosaw41433056").getDescription());
+        System.out.println("? Duda :  " + twitter.showUser("AndrzejDuda").getDescription());
 
         System.out.println("____________________");
                 System.out.println( twitter.getUserTimeline("AndrzejDuda") );
         ;
+
         System.out.println("===============\n\n");
         //System.out.println( twitter.tweets().getRetweets(new Long("896523232098078720")) );
 
