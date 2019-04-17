@@ -1,3 +1,4 @@
+import twitter4j.ResponseList;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
@@ -50,17 +51,17 @@ public class Test {
         System.out.println("DUDA FOLLOWUJE:  " + twitter.showUser("AndrzejDuda").getFriendsCount());
         System.out.println("DUDE FOLLOWUJE :  " + twitter.showUser("AndrzejDuda").getFollowersCount());
         System.out.println("DATA :  " + twitter.showUser("AndrzejDuda").getCreatedAt());
-<<<<<<< HEAD
         System.out.println("LICZBA TWEETÓW? :  " + twitter.showUser("AndrzejDuda").getStatusesCount());
         System.out.println("? Radke :  " + twitter.showUser("Radosaw41433056").getDescription());
         System.out.println("? Duda :  " + twitter.showUser("AndrzejDuda").getDescription());
-=======
         System.out.println("DATA :  " + twitter.showUser("AndrzejDuda").getDescription());
->>>>>>> 3f1c4927379ed26305034462c0132df8dba8cd34
 
         System.out.println("____________________");
                 System.out.println( twitter.getUserTimeline("AndrzejDuda") );
-        ;
+
+
+        ResponseList<Status> retweets = twitter.getRetweets(1);
+
 
         System.out.println("===============\n\n");
         //System.out.println( twitter.tweets().getRetweets(new Long("896523232098078720")) );
