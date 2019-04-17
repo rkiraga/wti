@@ -1,6 +1,5 @@
 import twitter4j.Status;
 import twitter4j.Twitter;
-import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
 import twitter4j.auth.RequestToken;
@@ -47,7 +46,15 @@ public class Test {
             System.out.println(status.getUser().getName() + ":" +
                     status.getText());
         }
-        System.out.println( twitter.getUserTimeline("AndrzejDuda") );
+
+        System.out.println("DUDA FOLLOWUJE:  " + twitter.showUser("AndrzejDuda").getFriendsCount());
+        System.out.println("DUDE FOLLOWUJE :  " + twitter.showUser("AndrzejDuda").getFollowersCount());
+        System.out.println("DATA :  " + twitter.showUser("AndrzejDuda").getCreatedAt());
+        System.out.println("DATA :  " + twitter.showUser("AndrzejDuda"));
+
+        System.out.println("____________________");
+                System.out.println( twitter.getUserTimeline("AndrzejDuda") );
+        twitter.tweets();
         System.out.println("===============\n\n");
         //System.out.println( twitter.tweets().getRetweets(new Long("896523232098078720")) );
 
