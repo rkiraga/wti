@@ -54,7 +54,7 @@ public class Test {
 
         System.out.println("____________________");
                 System.out.println( twitter.getUserTimeline("AndrzejDuda") );
-        twitter.tweets();
+        ;
         System.out.println("===============\n\n");
         //System.out.println( twitter.tweets().getRetweets(new Long("896523232098078720")) );
 
