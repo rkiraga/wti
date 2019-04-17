@@ -46,7 +46,7 @@ public class Test {
 
 
         //Twitter twitter = TwitterFactory.getSingleton();
-        List<Statugit cs> statuses = twitter.getHomeTimeline();
+        List<Status> statuses = twitter.getHomeTimeline();
         System.out.println("Showing home timeline.");
         for (Status status : statuses) {
             System.out.println(status.getUser().getName() + ":" +
