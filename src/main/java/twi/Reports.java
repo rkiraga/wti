@@ -2,6 +2,8 @@ package twi;
 
 import twitter4j.Twitter;
 
+import java.util.List;
+
 public class Reports {
 
     Statistics statistics = null;
@@ -11,11 +13,13 @@ public class Reports {
     }
 
     public void makeReport(){
+        List<Integer> tweetsAndRetweets = statistics.getTweetsAndRetweetsCounter();
+
         System.out.println("Dane o użytkowniku: "       + statistics.getUsername());
         System.out.println("Ilość retweetow z ostatnich 1000: "
-                                                        + statistics.getTweetsAndRetweetsCounter().get(0));
+                                                        + tweetsAndRetweets.get(0));
         System.out.println("Ilość tweetow z ostatnich 1000: "
-                                                        + statistics.getTweetsAndRetweetsCounter().get(1));
+                                                        + tweetsAndRetweets.get(1));
         System.out.println("Ilość obserwującyh: "         + statistics.getFollowersCount());
         System.out.println("Ilość obserwowanych: "       + statistics.getFollowingCount());
 

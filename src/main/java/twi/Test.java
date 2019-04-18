@@ -66,7 +66,7 @@ public class Test {
 //        System.exit(0);
 
         //Reports reports = new Reports(twitter, "AndrzejDuda");
-        Reports reports = new Reports(twitter, "betelgeuse_3");
+        Reports reports = new Reports(twitter, "rkasprzyk");
 
         reports.makeReport();
 
